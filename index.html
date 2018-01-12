@@ -42,31 +42,31 @@
               
             
 
-              <a class="header-menu-link" id="header-menu-home" href="/">HOME</a>     
+              <a class="header-menu-link" id="header-menu-home" href="/">首页</a>     
 
             
             
             
 
-              <a class="header-menu-link" id="header-menu-archives" href="/archives">ARICHIVES</a>     
+              <a class="header-menu-link" id="header-menu-archives" href="/archives">归档</a>     
 
             
             
             
 
-              <a class="header-menu-link" id="header-menu-categories" href="/categories">CATEGORIES</a>     
+              <a class="header-menu-link" id="header-menu-categories" href="/categories">分类</a>     
 
             
             
             
 
-              <a class="header-menu-link" id="header-menu-tags" href="/tags">TAGS</a>     
+              <a class="header-menu-link" id="header-menu-tags" href="/tags">标签</a>     
 
             
             
             
 
-              <a class="header-menu-link" id="header-menu-about" href="/about">ABOUT</a>     
+              <a class="header-menu-link" id="header-menu-about" href="/about">关于</a>     
 
             
             
@@ -96,7 +96,39 @@
 		
     <div class="article-header">
     
-     <a class="article-title"  href="/2018/01/08/createServer/">Untitled</a>  
+     <a class="article-title"  href="/2018/01/12/slider/">无标题</a>  
+       
+	 
+
+	 <time>2018-01-12 </time>    
+</div>      
+
+    <div class="article-excerpt">	
+	
+  	
+
+  
+
+  	<h1 id="slider-简易编写"><a href="#slider-简易编写" class="headerlink" title="slider  简易编写"></a>slider  简易编写</h1><h2 id="自动轮播编写"><a href="#自动轮播编写" class="headerlink" title="自动轮播编写"></a>自动轮播编写</h2><h2 id="html代码"><a href="#html代码" class="headerlink" title="html代码"></a>html代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;slider&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;slider_content&quot;&gt;</span><br><span class="line">        &lt;div&gt;one&lt;/div&gt;</span><br><span class="line">        &lt;div&gt;two&lt;/div&gt;</span><br><span class="line">        &lt;div&gt;three&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="css代码"><a href="#css代码" class="headerlink" title="css代码"></a>css代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">	*&#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        li&#123;</span><br><span class="line">            list-style: none;</span><br><span class="line">        &#125;</span><br><span class="line">        .slider&#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 300px;</span><br><span class="line">            margin:100px auto;</span><br><span class="line">            position: relative;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">        .slider .slider_content&#123;</span><br><span class="line">            width: 1200px;</span><br><span class="line">            height: 300px;</span><br><span class="line">            position: absolute;</span><br><span class="line">            left: 0;</span><br><span class="line">            top: 0;</span><br><span class="line">        &#125;</span><br><span class="line">        .slider .slider_content div&#123;</span><br><span class="line">            width: 400px;</span><br><span class="line">            height: 300px;</span><br><span class="line">            float: left;</span><br><span class="line">            text-align: center;</span><br><span class="line">            line-height: 300px;</span><br><span class="line">            font-size: 36px;</span><br><span class="line">        &#125;</span><br><span class="line">        .slider .slider_content div:nth-of-type(1)&#123;</span><br><span class="line">            background: pink;</span><br><span class="line">        &#125;</span><br><span class="line">        .slider .slider_content div:nth-of-type(2)&#123;</span><br><span class="line">            background: orange;</span><br><span class="line">        &#125;</span><br><span class="line">        .slider .slider_content div:nth-of-type(3)&#123;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	var currentIndex = 0;</span><br><span class="line">    var imgw = 400;</span><br><span class="line">    var length = $(&apos;.slider_content div&apos;).size();</span><br><span class="line">    var t = setInterval(&apos;move(true)&apos;,3000);</span><br><span class="line">    function move(isRight)&#123;</span><br><span class="line">        if(isRight)&#123;</span><br><span class="line">            currentIndex++;</span><br><span class="line">            if(currentIndex == length)&#123;</span><br><span class="line">                currentIndex = 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            currentIndex--;</span><br><span class="line">            if (currentIndex == -1) &#123;</span><br><span class="line">                currentIndex = length-1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        $(&apos;.slider_content&apos;).animate(&#123;left: - imgw * currentIndex&#125;,1000);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure> 
+
+    
+
+</div>		
+    
+  	<a class="article-readmore" href="/2018/01/12/slider/">阅读更多</a> 	
+	
+</article>     
+     	
+      	  	
+
+  		
+    	<article class="article">	
+		
+    <div class="article-header">
+    
+     <a class="article-title"  href="/2018/01/08/createServer/">无标题</a>  
        
 	 
 
@@ -116,7 +148,7 @@
 
 </div>		
     
-  	<a class="article-readmore" href="/2018/01/08/createServer/">More</a> 	
+  	<a class="article-readmore" href="/2018/01/08/createServer/">阅读更多</a> 	
 	
 </article>     
      	
@@ -147,7 +179,7 @@
 
 </div>		
     
-  	<a class="article-readmore" href="/2017/12/27/Hello-Javascirpt/">More</a> 	
+  	<a class="article-readmore" href="/2017/12/27/Hello-Javascirpt/">阅读更多</a> 	
 	
 </article>     
      	
@@ -186,7 +218,7 @@
 
 </div>		
     
-  	<a class="article-readmore" href="/2017/12/27/hello-world/">More</a> 	
+  	<a class="article-readmore" href="/2017/12/27/hello-world/">阅读更多</a> 	
 	
 </article>     
      	
@@ -245,33 +277,40 @@
 			
 			<div class="count-item">
 			<a class="slideDownMin" href="/archives">					
-			3<br/>Posts</a>
+			4<br/>文章</a>
 			</div>	
 			
 			<div class="count-item">
 			<a class="slideDownMin" href="/categories">	
-			0<br/>Categories</a>
+			0<br/>分类</a>
 			</div>
 		</div>
 </div>
 		  
 		    <div class="search-widget">
-	<span  class="search-word">  Search </span>
+	<span  class="search-word">  搜索 </span>
 	<i class="iconfont icon-search"></i>
 </div>
 		  
 		    
   <div class="widget">
 
-   	  <a href="/archives"><span class="widget-title">Recents</span></a>
+   	  <a href="/archives"><span class="widget-title">最近文章</span></a>
 
    	 	
 
                 
       
+            <a class="recent-post slideDownMin animation-border-item" href="/2018/01/12/slider/" title="">
+
+            无标题
+
+            </a>          
+                
+      
             <a class="recent-post slideDownMin animation-border-item" href="/2018/01/08/createServer/" title="">
 
-            Untitled
+            无标题
 
             </a>          
                 
@@ -301,7 +340,7 @@
 		  
 		    <div class="widget" >
 	
-<span class="widget-title">Friends</span>
+<span class="widget-title">友链</span>
 
 	<div>
 						
@@ -365,7 +404,7 @@
 <script src="/js/search.js"></script>     
           
           <div class="search-container">
-            <input type="text" placeholder="Typing Something" id="search-input" class="search-input">  
+            <input type="text" placeholder="搜索点什么吧..." id="search-input" class="search-input">  
               <span class="search-cancel iconfont icon-cancel"></span>
               <div id="search-result" class="search-result"></div>
           </div>
@@ -380,37 +419,37 @@
          
             
 
-            <a class="mobile-menu-link" href="/">HOME
+            <a class="mobile-menu-link" href="/">首页
             </a>
             
          
             
 
-            <a class="mobile-menu-link" href="/archives">ARICHIVES
+            <a class="mobile-menu-link" href="/archives">归档
             </a>
             
          
             
 
-            <a class="mobile-menu-link" href="/categories">CATEGORIES
+            <a class="mobile-menu-link" href="/categories">分类
             </a>
             
          
             
 
-            <a class="mobile-menu-link" href="/tags">TAGS
+            <a class="mobile-menu-link" href="/tags">标签
             </a>
             
          
             
 
-            <a class="mobile-menu-link" href="/about">ABOUT
+            <a class="mobile-menu-link" href="/about">关于
             </a>
             
          
                           
 
-            <a class="mobile-menu-link mobile-menu-search" href="#">SEARCH </a>                 
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
             
          
 </div>     
